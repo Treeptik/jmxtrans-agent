@@ -418,9 +418,9 @@ jmxtrans-agent-elasticsearch
         <query objectName="java.lang:type=Threading" attribute="TotalStartedThreadCount" resultAlias="jvm.totalStartedThreadCount"/>
         <query objectName="java.lang:type=Threading" attribute="PeakThreadCount" resultAlias="jvm.peakThreadCount"/>
     </queries>
-    <outputWriter class="org.jmxtrans.agent.ElasticSearchOutputWriter">
+    <outputWriter class="org.jmxtrans.agent.elastic.ElasticSearchOutputWriter">
         <elasticsearchHost>localhost</elasticsearchHost>
-        <elasticsearchPort>9300</elasticsearchPort>
+        <elasticsearchPort>9200</elasticsearchPort>
         <elasticsearchClusterName>elasticsearch</elasticsearchClusterName>
         <elasticsearchIndex>jmxtrans-%{yyyy.MM.dd}</elasticsearchIndex>
         <nodeName>nodeName</nodeName><!--empty by default-->
